@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Handling Management System</title>
+
+    <style>
+        body {
+            background-color: lightblue;
+            font-family: Arial;
+            text-align: center;
+        }
+
+        .box {
+            background-color: white;
+            width: 450px;
+            margin: 40px auto;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: darkblue;
+        }
+
+        input, select {
+            width: 90%;
+            padding: 10px;
+            margin: 8px;
+        }
+
+        button {
+            background-color: darkblue;
+            color: white;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        #result {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h1>Event Handling Management System</h1>
+
+    <form onsubmit="showEvent(); return false;">
+
+        <input type="text" id="eventName"
+               placeholder="Event Name" required>
+        <br>
+
+        <input type="date" id="eventDate" required>
+        <br>
+
+        <input type="text" id="venue"
+               placeholder="Event Venue" required>
+        <br>
+
+        <input type="text" id="organizer"
+               placeholder="Organizer Name" required>
+        <br>
+
+        <input type="number" id="participants"
+               placeholder="Number of Participants" required>
+        <br>
+
+        <select id="eventType" required>
+            <option value="">Select Event Type</option>
+            <option>Workshop</option>
+            <option>Seminar</option>
+            <option>Conference</option>
+            <option>Cultural Event</option>
+            <option>Sports Event</option>
+        </select>
+        <br>
+
+        <button type="submit">Submit Event</button>
+        <button type="reset">Reset</button>
+
+    </form>
+
+    <p id="result"></p>
+
+</div>
+
+<script>
+
+function showEvent() {
+
+    let name = document.getElementById("eventName").value;
+    let date = document.getElementById("eventDate").value;
+    let venue = document.getElementById("venue").value;
+    let organizer = document.getElementById("organizer").value;
+
+    document.getElementById("result").innerHTML =
+        "Event Registered Successfully!<br>" +
+        "Event: " + name + "<br>" +
+        "Date: " + date + "<br>" +
+        "Venue: " + venue + "<br>" +
+        "Organizer: " + organizer;
+}
+
+</script>
+
+</body>
+</html>

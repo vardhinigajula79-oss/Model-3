@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Application Form</title>
+
+    <style>
+        body {
+            background-color: lightblue;
+            font-family: Arial;
+        }
+
+        .form-box {
+            background-color: white;
+            width: 500px;
+            margin: 30px auto;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: darkblue;
+        }
+
+        label {
+            display: inline-block;
+            width: 150px;
+            margin: 8px;
+        }
+
+        input, select, textarea {
+            padding: 8px;
+            margin: 5px;
+            width: 250px;
+        }
+
+        textarea {
+            height: 60px;
+        }
+
+        .button {
+            text-align: center;
+        }
+
+        button {
+            background-color: darkblue;
+            color: white;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 5px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="form-box">
+
+    <h1>Student Application Form</h1>
+
+    <form>
+
+        <label>Student Name:</label>
+        <input type="text" required>
+        <br>
+
+        <label>Father's Name:</label>
+        <input type="text" required>
+        <br>
+
+        <label>Date of Birth:</label>
+        <input type="date" required>
+        <br>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="Male" style="width:auto;"> Male
+        <input type="radio" name="gender" value="Female" style="width:auto;"> Female
+        <br>
+
+        <label>Email:</label>
+        <input type="email" required>
+        <br>
+
+        <label>Phone Number:</label>
+        <input type="tel" required>
+        <br>
+
+        <label>Course:</label>
+        <select>
+            <option>Select Course</option>
+            <option>B.Tech AI & DS</option>
+            <option>B.Tech CSE</option>
+            <option>B.Tech IT</option>
+            <option>B.Tech ECE</option>
+        </select>
+        <br>
+
+        <label>Address:</label>
+        <textarea></textarea>
+        <br>
+
+        <label>Qualification:</label>
+        <input type="text">
+        <br>
+
+        <div class="button">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+</html>
